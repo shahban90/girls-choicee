@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#ff4f9a">
+<title>Girls Choice | Beauty & Fashion</title>
+
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, sans-serif;
+}
+
+body{
+  background:#fff7fb;
+  color:#333;
+}
+
+header{
+  background:linear-gradient(135deg,#ff4f9a,#ff86bd);
+  color:white;
+  padding:28px 18px;
+  text-align:center;
+  position:sticky;
+  top:0;
+  z-index:10;
+  box-shadow:0 4px 20px #ff4f9a55;
+}
+
+header h1{
+  font-size:34px;
+  letter-spacing:1px;
+}
+
+header p{
+  margin-top:7px;
+  opacity:.95;
+}
+
+nav{
+  margin-top:15px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  margin:0 7px;
+  font-weight:bold;
+}
+
+.hero{
+  min-height:330px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:40px 20px;
+  background:
+    radial-gradient(circle at top left,#ffd2e6,transparent 35%),
+    radial-gradient(circle at bottom right,#ffc0dd,transparent 35%);
+}
+
+.hero h2{
+  font-size:42px;
+  color:#e72f82;
+  animation:fadeDown 1s ease;
+}
+
+.hero p{
+  max-width:600px;
+  margin:15px auto;
+  line-height:1.7;
+  color:#666;
+}
+
+.btn{
+  display:inline-block;
+  background:#ff4f9a;
+  color:white;
+  text-decoration:none;
+  border:0;
+  padding:13px 22px;
+  border-radius:30px;
+  font-weight:bold;
+  cursor:pointer;
+  transition:.3s;
+  margin:5px;
+}
+
+.btn:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px #ff4f9a55;
+}
+
+.products{
+  padding:45px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section-title{
+  text-align:center;
+  color:#e72f82;
+  font-size:30px;
+  margin-bottom:30px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:22px;
+}
+
+.card{
+  background:white;
+  border-radius:20px;
+  overflow:hidden;
+  box-shadow:0 8px 25px #d9367920;
+  transition:.35s;
+  animation:fadeUp .7s ease;
+}
+
+.card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 35px #d9367930;
+}
+
+.card img{
+  width:100%;
+  height:240px;
+  object-fit:cover;
+  background:#ffe7f1;
+}
+
+.card-content{
+  padding:18px;
+}
+
+.card h3{
+  color:#e72f82;
+  margin-bottom:8px;
+}
+
+.card p{
+  color:#777;
+  min-height:42px;
+  line-height:1.5;
+}
+
+.price{
+  color:#222;
+  font-size:20px;
+  font-weight:bold;
+  margin:12px 0;
+}
+
+footer{
+  background:#ff4f9a;
+  color:white;
+  text-align:center;
+  padding:30px 15px;
+  margin-top:30px;
+}
+
+footer a{
+  color:white;
+  font-weight:bold;
+}
+
+.admin{
+  max-width:900px;
+  margin:30px auto;
+  padding:25px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 8px 25px #00000012;
+}
+
+.admin h2{
+  color:#e72f82;
+  margin-bottom:20px;
+}
+
+input,textarea{
+  width:100%;
+  padding:13px;
+  border:1px solid #ddd;
+  border-radius:12px;
+  margin:7px 0 12px;
+  outline:none;
+}
+
+textarea{
+  resize:vertical;
+  min-height:90px;
+}
+
+#adminPanel{
+  display:none;
+}
+
+.small{
+  color:#888;
+  font-size:13px;
+}
+
+.admin-product{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding:12px 0;
+  border-bottom:1px solid #eee;
+}
+
+.admin-product img{
+  width:60px;
+  height:60px;
+  object-fit:cover;
+  border-radius:10px;
+}
+
+.delete{
+  background:#ff3d5a;
+}
+
+@keyframes fadeUp{
+  from{opacity:0;transform:translateY(20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@keyframes fadeDown{
+  from{opacity:0;transform:translateY(-20px)}
+  to{opacity:1;transform:translateY(0)}
+}
+
+@media(max-width:600px){
+  header h1{font-size:28px}
+  .hero h2{font-size:32px}
+  .card img{height:210px}
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <h1>🌸 Girls Choice 🌸</h1>
+  <p>Beauty • Fashion • Style</p>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#products">Products</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <div>
+    <h2>Welcome to Girls Choice 💕</h2>
+    <p>
+      Discover beautiful products specially selected for girls.
+      Stylish, cute and affordable products — all in one place.
+    </p>
+
+    <a class="btn"
+       href="https://wa.me/c/923706903659"
+       target="_blank">
+       🛍️ Shop on WhatsApp
+    </a>
+
+    <a class="btn"
+       href="https://wa.me/923703690659"
+       target="_blank">
+       💬 Contact Owner
+    </a>
+  </div>
+</section>
+
+<section class="products" id="products">
+  <h2 class="section-title">✨ Our Products ✨</h2>
+
+  <div class="grid" id="productGrid"></div>
+</section>
+
+<!-- OWNER PANEL -->
+
+<section class="admin" id="adminPanel">
+
+  <h2>👑 Owner Product Panel</h2>
+
+  <p class="small">
+    Yahan se aap products add kar sakte hain.
+    Products isi browser mein save honge.
+  </p>
+
+  <input id="productName" placeholder="Product Name">
+
+  <input id="productPrice" placeholder="Price e.g. Rs. 1,500">
+
+  <input id="productImage" placeholder="Image URL">
+
+  <textarea id="productBio"
+    placeholder="Product description / bio"></textarea>
+
+  <button class="btn" onclick="addProduct()">
+    ➕ Add Product
+  </button>
+
+  <div id="adminProducts"></div>
+
+</section>
+
+<footer id="contact">
+  <h3>🌸 Girls Choice 🌸</h3>
+
+  <p style="margin:10px 0">
+    For orders & information
+  </p>
+
+  <a href="https://wa.me/923703690659" target="_blank">
+    📞 +92 370 3690659
+  </a>
+
+  <br><br>
+
+  <a href="https://wa.me/c/923706903659" target="_blank">
+    🛍️ WhatsApp Shop
+  </a>
+
+  <p style="margin-top:20px;font-size:13px">
+    © 2026 Girls Choice. All Rights Reserved.
+  </p>
+</footer>
+
+<script>
+
+/* DEFAULT PRODUCTS */
+
+const defaultProducts = [
+  {
+    name:"Beautiful Product",
+    price:"Rs. 1,500",
+    image:"https://images.unsplash.com/photo-1525507119028-ed4c629a60a3?auto=format&fit=crop&w=800&q=80",
+    bio:"Beautiful and stylish product from Girls Choice."
+  },
+  {
+    name:"Fashion Collection",
+    price:"Rs. 2,000",
+    image:"https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&w=800&q=80",
+    bio:"Latest fashion collection for stylish girls."
+  },
+  {
+    name:"Beauty Collection",
+    price:"Rs. 1,200",
+    image:"https://images.unsplash.com/photo-1596462502278-27bfdc403348?auto=format&fit=crop&w=800&q=80",
+    bio:"Cute beauty products for your everyday style."
+  }
+];
+
+/* LOAD PRODUCTS */
+
+let products =
+  JSON.parse(localStorage.getItem("girlsChoiceProducts"))
+  || defaultProducts;
+
+function saveProducts(){
+  localStorage.setItem(
+    "girlsChoiceProducts",
+    JSON.stringify(products)
+  );
+}
+
+/* SHOW PRODUCTS */
+
+function displayProducts(){
+
+  const grid =
+    document.getElementById("productGrid");
+
+  grid.innerHTML="";
+
+  products.forEach((product,index)=>{
+
+    grid.innerHTML += `
+      <div class="card">
+
+        <img
+          src="${product.image}"
+          alt="${product.name}"
+          onerror="this.src='https://via.placeholder.com/600x500?text=Girls+Choice'"
+        >
+
+        <div class="card-content">
+
+          <h3>${product.name}</h3>
+
+          <p>${product.bio}</p>
+
+          <div class="price">
+            ${product.price}
+          </div>
+
+          <a
+            class="btn"
+            href="https://wa.me/923703690659?text=${encodeURIComponent(
+              "Hello Girls Choice, I want to order: " + product.name
+            )}"
+            target="_blank">
+            💬 Order Now
+          </a>
+
+        </div>
+
+      </div>
+    `;
+  });
+
+  displayAdminProducts();
+}
+
+/* ADD PRODUCT */
+
+function addProduct(){
+
+  const name =
+    document.getElementById("productName").value.trim();
+
+  const price =
+    document.getElementById("productPrice").value.trim();
+
+  const image =
+    document.getElementById("productImage").value.trim();
+
+  const bio =
+    document.getElementById("productBio").value.trim();
+
+  if(!name || !price || !image){
+
+    alert("Please fill Product Name, Price and Image URL.");
+
+    return;
+  }
+
+  products.push({
+    name:name,
+    price:price,
+    image:image,
+    bio:bio || "Beautiful product from Girls Choice."
+  });
+
+  saveProducts();
+
+  document.getElementById("productName").value="";
+  document.getElementById("productPrice").value="";
+  document.getElementById("productImage").value="";
+  document.getElementById("productBio").value="";
+
+  displayProducts();
+
+  alert("Product added successfully! 🌸");
+}
+
+/* ADMIN PRODUCTS */
+
+function displayAdminProducts(){
+
+  const box =
+    document.getElementById("adminProducts");
+
+  box.innerHTML =
+    "<h3 style='margin-top:25px;color:#e72f82'>Added Products</h3>";
+
+  products.forEach((product,index)=>{
+
+    box.innerHTML += `
+
+      <div class="admin-product">
+
+        <img src="${product.image}">
+
+        <div style="flex:1">
+          <b>${product.name}</b>
+          <br>
+          <span class="small">${product.price}</span>
+        </div>
+
+        <button
+          class="btn delete"
+          onclick="deleteProduct(${index})">
+          Delete
+        </button>
+
+      </div>
+    `;
+  });
+}
+
+/* DELETE PRODUCT */
+
+function deleteProduct(index){
+
+  if(confirm("Delete this product?")){
+
+    products.splice(index,1);
+
+    saveProducts();
+
+    displayProducts();
+  }
+}
+
+/* OWNER PANEL PASSWORD */
+
+function openOwnerPanel(){
+
+  const password =
+    prompt("Enter Owner Password:");
+
+  /*
+    CHANGE THIS PASSWORD
+    before publishing your website.
+  */
+
+  if(password === "GirlsChoice123"){
+
+    document.getElementById("adminPanel").style.display="block";
+
+    document.getElementById("adminPanel")
+      .scrollIntoView({behavior:"smooth"});
+
+  }else{
+
+    alert("Wrong password ❌");
+  }
+}
+
+/* SECRET OWNER ACCESS
+   Click footer title 5 times
+*/
+
+let clicks=0;
+
+document.querySelector("footer h3")
+.addEventListener("click",()=>{
+
+  clicks++;
+
+  if(clicks >= 5){
+
+    clicks=0;
+
+    openOwnerPanel();
+  }
+});
+
+/* INITIAL LOAD */
+
+displayProducts();
+
+</script>
+
+</body>
+</html>
